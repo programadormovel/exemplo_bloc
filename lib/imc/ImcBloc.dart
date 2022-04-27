@@ -8,7 +8,7 @@ class ImcBloc {
   calculate() {
     double weight = double.parse(weightCtrl.text);
     double height = double.parse(heightCtrl.text);
-    double imc = weight / (height * height);
+    double imc = (weight / (height * height)) * 10000;
 
     if (imc < 18.6) {
       result = "Abaixo do Peso (${imc.toStringAsPrecision(2)})";
